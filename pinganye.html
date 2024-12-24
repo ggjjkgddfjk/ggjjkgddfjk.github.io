@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>平安夜快乐！</title>
+    <style>
+        body {
+            font-family: '微软雅黑', sans-serif;
+            background-color: #00264d;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to bottom, #00264d, #00509e);
+            overflow: hidden;
+        }
+        .card {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+        }
+        .card h1 {
+            font-size: 2.5em;
+            margin: 0 0 10px;
+        }
+        .card p {
+            font-size: 1.2em;
+            margin: 10px 0 20px;
+        }
+        .card a {
+            display: inline-block;
+            text-decoration: none;
+            background: #ff5733;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: background 0.3s;
+        }
+        .card a:hover {
+            background: #c70039;
+        }
+        .apple {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: radial-gradient(circle, #ff0000, #b20000);
+            border-radius: 50%;
+            animation: float 5s ease-in-out infinite;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        .apple::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 15px;
+            width: 10px;
+            height: 20px;
+            background: #006400;
+            border-radius: 5px;
+        }
+        .apple:nth-child(odd) {
+            animation-duration: 6s;
+        }
+        .apple:nth-child(even) {
+            animation-duration: 4s;
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) translateX(0);
+            }
+            50% {
+                transform: translateY(-50px) translateX(10px);
+            }
+        }
+
+        /* 大苹果容器 */
+        .big-apple-container {
+            position: absolute;
+            bottom: 10%;
+            right: 10%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, #ff0000, #b20000);
+            border-radius: 50%;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            overflow: hidden;
+        }
+        .big-apple-container::before {
+            content: '';
+            position: absolute;
+            top: -30px;
+            left: 120px;
+            width: 30px;
+            height: 60px;
+            background: #006400;
+            border-radius: 15px;
+        }
+        .particle {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            animation: move 5s infinite ease-in-out;
+        }
+        @keyframes move {
+            0% {
+                transform: translate(0, 0) scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: translate(-150px, -150px) scale(1.5);
+                opacity: 0.5;
+            }
+            100% {
+                transform: translate(-300px, -300px) scale(0.8);
+                opacity: 0;
+            }
+        }
+        .particle:nth-child(odd) {
+            animation-duration: 6s;
+        }
+        .particle:nth-child(even) {
+            animation-duration: 4s;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>🎄 平安夜快乐！🎄</h1>
+        <p>愿你在这个平安夜充满幸福与平安！</p>
+        <a href="https://example.com/holiday-wishes" target="_blank">分享祝福</a>
+    </div>
+
+    <!-- 动态小苹果 -->
+    <div class="apple" style="top: 20%; left: 30%;"></div>
+    <div class="apple" style="top: 50%; left: 70%;"></div>
+    <div class="apple" style="top: 80%; left: 20%;"></div>
+    <div class="apple" style="top: 40%; left: 50%;"></div>
+
+    <!-- 动态粒子效果大苹果 -->
+    <div class="big-apple-container">
+        <!-- 粒子 -->
+        <div class="particle" style="top: 20%; left: 20%;"></div>
+        <div class="particle" style="top: 30%; left: 40%;"></div>
+        <div class="particle" style="top: 50%; left: 60%;"></div>
+        <div class="particle" style="top: 70%; left: 30%;"></div>
+        <div class="particle" style="top: 80%; left: 50%;"></div>
+        <div class="particle" style="top: 40%; left: 70%;"></div>
+        <div class="particle" style="top: 10%; left: 20%;"></div>
+        <div class="particle" style="top: 60%; left: 40%;"></div>
+    </div>
+</body>
+</html>
